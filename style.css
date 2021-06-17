@@ -1,0 +1,185 @@
+html, body {
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+*{
+    font-family: Helvetica, Arial, sans-serif;
+}
+body {
+    background: url(https://www.careersourcecentralflorida.com/wp-content/uploads/cscf_background_geometric_triangles_blue-1.jpg) no-repeat center center fixed;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header img {
+    width: 250px;
+}
+.col-1 {
+    display: flex;
+    flex-direction:column;
+}
+.col-1.search-container {
+    padding: 0% 10%;
+    max-width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.search {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 3px;
+    padding: 8px;
+    border: 1px solid #2d2d2e70;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.2);
+    position: relative;
+}
+.search::after {
+    content: "";
+    background: url(./image/search.svg) no-repeat;
+    width: 17px;
+    height: 17px;
+    right: 25px;
+    top: calc(50% - 9px);
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    cursor: pointer;
+}
+.search input:after {
+    content: "";
+    background: url(./image/search.svg) no-repeat;
+    width: 17px;
+    height: 17px;
+    right: 25px;
+    top: calc(50% - 9px);
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    cursor: pointer;
+}
+.search input {
+    width: 100%;
+    padding: 15px 40px 15px 15px;
+    font-size: 14px;
+    border: 0;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(24,24,24,0.2);
+}
+.search-dropdown {
+    position: absolute;
+    width: 75%;
+    background: rgb(255 255 255 / 61%);
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 40px 15px 90px rgb(0 0 0 / 45%);
+    border-radius: 0px 0px 20px 20px;
+    overflow: hidden;
+    z-index: 2;
+    overflow-y: scroll;
+    max-height: 40vh;
+}
+.search ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.search li a:hover {
+    background: rgba(0, 63, 99, 0.2);
+}
+.search li a {
+    padding: 25px;
+    text-decoration: none;
+    color: inherit!important;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+}
+img.icon {
+    max-width: 10%;
+    width: 40px;
+}
+.col-2 {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.widget {
+    display: flex;
+    margin: 0px 20px;
+    width: 40%;
+    max-width: 500px;
+    background: white;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 5px;
+    box-shadow: 1px 2px 8px 0 rgba(0,0,0,0.25);
+    padding: 25px 20px;
+}
+.widget img {
+    max-width: 50%;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.widget .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+.content .button {
+    border: none;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 13px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: inherit;
+    transition: 0.2s ease-out;
+    opacity: 0.85;
+    outline: none;
+    text-decoration: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.content .subtext {
+    margin-top: auto;
+    margin-right: auto;
+    text-align:left;
+}
+.content .title {
+    font-weight: bold;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    margin-right: auto;
+}
+.button:hover, .button:active {
+    opacity: 1;
+}
+.button.red {
+    background: #fc4c4c;
+    color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(252,76,76,0.5);
+}
+.button.blue {
+    background: rgb(41, 153, 246);
+    color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(41, 153, 246, 0.5);
+}
+
+.hide {
+    display: none!important;
+}
