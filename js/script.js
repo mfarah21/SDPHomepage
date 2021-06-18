@@ -47,11 +47,22 @@ const APP = {
             APP.element.search.dropdown.list.innerHTML = html;
         },
         createDropdownItemHMTL: item => {
+            const types = {
+                quickGuide: `./image/paper.svg`
+            }
             return `
             <li>
                 <a target="_blank" href="${item.url}">
-                    <span class="link-title">${item.name}</span>
-                    <img class="icon" src="./image/paper.svg">
+                    <div class="icon-container" data-type="${item.type}">
+                        <img class="icon" src="${types[item.type]}">
+                    </div>
+                    <div class="link-label">
+                        <span class="link-title">${item.name}</span>
+                        <div class="link-meta">
+                        <span class="link-origin" data-origin="${item.origin}">${item.origin}</span>
+                        <span class="link-application" data-app="${item.application}">${item.application}</span>
+                        </div>
+                    </div>
                 </a>
             </li>
             `

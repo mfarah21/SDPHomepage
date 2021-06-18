@@ -6,10 +6,20 @@ html, body {
 *{
     font-family: Helvetica, Arial, sans-serif;
 }
+img {
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
 body {
     background: url(https://www.careersourcecentralflorida.com/wp-content/uploads/cscf_background_geometric_triangles_blue-1.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
-
+.container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
 header {
     display: flex;
     justify-content: center;
@@ -70,10 +80,12 @@ header img {
     box-sizing: border-box;
     background: #fff;
     box-shadow: 0 1px 2px 0 rgba(24,24,24,0.2);
+    outline: 0!important;
+    appearance: none!important;
 }
 .search-dropdown {
     position: absolute;
-    width: 75%;
+    width: 95%;
     background: rgb(255 255 255 / 61%);
     backdrop-filter: blur(20px) saturate(180%);
     box-shadow: 40px 15px 90px rgb(0 0 0 / 45%);
@@ -89,7 +101,10 @@ header img {
     padding: 0;
 }
 .search li a:hover {
-    background: rgba(0, 63, 99, 0.2);
+    background: rgba(55, 156, 214, 0.336);
+}
+.search li a:hover .link-meta {
+    opacity: 1;
 }
 .search li a {
     padding: 25px;
@@ -97,13 +112,125 @@ header img {
     color: inherit!important;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    transition: all 0.2s ease-in-out;
     align-items: center;
-    font-size: 1.5em;
+}
+.search li:last-of-type {
+    border-bottom: 0px;
+}
+.search li {
+    border-bottom: 2px solid rgb(223 214 214 / 40%);
+}
+.link-label {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.link-title {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #494949;
+}
+.link-meta {
+    display: flex;
+    justify-content: flex-start;
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+}
+.link-origin, .link-application {
+    font-size: 0.8em;
+    padding: 4px;
+    border-radius: 3px;
+    display: flex;
+    align-self: flex-start;
+    border: 1px solid transparent;
+}
+span.link-application {
+    margin-left: 7px;
+    opacity: 0.8;
+}
+/* Link meta colors */
+[data-origin="Training & Learning Center"] {
+    background: #dbffea;
+    border: 1px solid #87f1c5!important;
+    color: #14a03c;
+}
+[data-app="Email"] {
+    background: #fff;
+    border: 1px solid #009bff;
+    color: #009bff;
+}
+[data-app="Cloud"] {
+    background: rgb(179 246 255 / 75%);
+    border: 1px solid #009bff;
+    color: #009bff;
+}
+[data-app="Desk Phone"] {
+    background: rgb(126, 126, 126);
+    border: 1px solid #535353;
+    color: #ffffff;
+}
+[data-app="iPhone"] {
+    background: rgb(53, 52, 52);
+    border: 1px solid #535353;
+    color: #f1f1f1;
+}
+[data-app="Employ Florida"] {
+    background: #ffe8de;
+    border: 1px solid #f26122;
+    color: #a84318;
+}
+[data-app="Manage Engine"] {
+    background: rgb(255, 230, 175);
+    border: 1px solid #ffaa2a;
+    color: #dd962b;
+}
+[data-app="Hardware"] {
+    background: #f1dcca;
+    border: 1px solid #61000017;
+    color: #2c0e00;
+}
+[data-app="Windows"] {
+    background: #67baff;
+    border: 1px solid #95d1ff;
+    color: #0f2f5a;
+}
+[data-app="Microsoft Word"] {
+    background: #ffffff;
+    border: 1px solid #065999;
+    color: #065999;
+}
+[data-app="Microsoft OneDrive"] {
+    background: #ffffff;
+    border: 1px solid #0078d4;
+    color: #0078d4;
+}
+[data-app="Microsoft Teams"] {
+    background: #ffffff;
+    border: 1px solid #7071bb;
+    color: #7071bb;
 }
 img.icon {
+    max-width: 100%;
+}
+.icon-container {
     max-width: 10%;
     width: 40px;
+}
+/* Search Drop down datatypes */
+[data-type="quickGuide"]::after {
+    content: 'Quick Guide';
+    font-size: 0.6em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(77 77 77 / 50%);
+    letter-spacing: 0.1em;
+    margin-top: 0.3em;
 }
 .col-2 {
     display: flex;
@@ -159,12 +286,14 @@ img.icon {
     margin-top: auto;
     margin-right: auto;
     text-align:left;
+    color: #4e4e4e;
 }
 .content .title {
     font-weight: bold;
     font-size: 1.6em;
     margin-bottom: 20px;
     margin-right: auto;
+    color: #252525;
 }
 .button:hover, .button:active {
     opacity: 1;
@@ -182,4 +311,30 @@ img.icon {
 
 .hide {
     display: none!important;
+}
+
+/* iOS MacOS Scrollbar style */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 6px;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  background-color: rgba(0, 0, 0, 0, 0.9);
+  -webkit-border-radius: 7px;
+  -webkit-box-shadow: inset -1px -1px 10px rgba(0, 0, 0, 0.30),
+    inset 1px 1px 0px rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
