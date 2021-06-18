@@ -1,0 +1,16 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>manage_engine_logo-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffce26 } 
+		.shp1 { fill: #0879b8 } 
+		.shp2 { fill: #069b4f } 
+		.shp3 { fill: #cb2034 } 
+	</style>
+	<g id="Folder 1">
+		<path id="XMLID_23_" class="shp0" d="M347.42 29.87C535.81 160.58 457 462.38 257.07 495.06L257.07 495.06C512.74 495.06 597.33 145.2 347.42 29.87L347.42 29.87Z" />
+		<path id="XMLID_22_" class="shp1" d="M147.49 27.94C370.49 -4.74 462.76 270.15 364.72 397.02C526.2 235.55 397.4 -52.79 147.49 27.94L147.49 27.94Z" />
+		<path id="XMLID_21_" class="shp2" d="M16.77 160.58C126.34 -2.81 355.11 97.15 378.18 262.46C405.09 60.62 135.96 -52.79 16.77 160.58L16.77 160.58Z" />
+		<path id="XMLID_20_" class="shp3" d="M11 283.61C37.91 114.45 257.07 97.15 337.81 216.33C272.45 47.17 14.84 68.31 11 283.61L11 283.61Z" />
+	</g>
+</svg>
