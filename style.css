@@ -95,6 +95,11 @@ header img {
     overflow-y: scroll;
     max-height: 40vh;
 }
+
+.search ul.itemList {
+    display: flex;
+    flex-direction: column;
+}
 .search ul {
     list-style: none;
     margin: 0;
@@ -122,12 +127,24 @@ header img {
 .search li {
     border-bottom: 2px solid rgb(223 214 214 / 40%);
 }
+.search ul.itemList .list-title {
+    font-size: 0.8em;
+}
+span.list-title {
+    width: 80%;
+    padding: 5px 25px;
+    color: #4c4b4b;
+    opacity: 0.5;
+    margin-top: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+}
 /* App search items */
 .search ul.appList {
     display: flex;
     flex-wrap: wrap;
     font-size: 0.8em;
-    border-bottom: 2px solid rgb(223 214 214 / 40%);
+    /* border-bottom: 2px solid rgb(223 214 214 / 40%); */
 }
 .appList li {
     width: 50%;

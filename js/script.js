@@ -26,6 +26,7 @@ const APP = {
             APP.LISTENER.searchInputType();
             APP.LISTENER.searchInputFocus();
             APP.DOM.buildDropdown(APP.meta.quickGuides);
+            APP.DOM.buildAppSearchDropdown(APP.exec.searchApps('&&ALL'));
 
         },
         searchGuides: query => {
@@ -42,10 +43,15 @@ const APP = {
             let results = [];
             if(!query){return results};
             for(let app in APP.meta.apps){
+                if(query === "&&ALL"){
+                    results.push(APP.meta.apps[app]);
+                    continue
+                }
                 let title = app.toLowerCase();
                 if(title.includes(query.toLowerCase())){
                     results.push(APP.meta.apps[app]);
                 }
+                
             }
             return results
         }
@@ -58,11 +64,21 @@ const APP = {
             el.classList.remove('hide');
         },
         buildDropdown: itemArr => {
-            let html = ``;
+            let html = `<span class="list-title">Training & Guides</span>`;
             for(let item of itemArr){
                 html+= APP.DOM.createDropdownItemHTML(item);
             }
             APP.element.search.dropdown.list.innerHTML = html;
+        },
+        buildAppSearchDropdown: itemArr => {
+            let html = `<span class="list-title">Applications & Services</span>`;
+            for(let item of itemArr){
+                html+= APP.DOM.createDropdownAppHTML(item);
+            }
+            if(itemArr.length === 0){
+                html = ``;
+            }
+            APP.element.search.dropdown.appList.innerHTML = html;
         },
         createDropdownItemHTML: item => {
             const types = {
@@ -105,18 +121,14 @@ const APP = {
             </li>
             `
         },
-        buildAppSearchDropdown: itemArr => {
-            
-            let html = ``;
-            for(let item of itemArr){
-                html+= APP.DOM.createDropdownAppHTML(item);
-            }
-            APP.element.search.dropdown.appList.innerHTML = html;
-        }
+        
     },
     LISTENER: {
         searchInputType: () => {
             APP.element.search.input.addEventListener('input', function(){
+                // scroll dropdown to top
+                APP.element.search.dropdown.container.scrollTop = 0;
+
                 APP.DOM.buildDropdown(APP.exec.searchGuides(this.value));
                 APP.DOM.buildAppSearchDropdown(APP.exec.searchApps(this.value));
                 if(this.value){
