@@ -22,12 +22,27 @@ const APP = {
             for(let guide of APP.meta.quickGuides){
                 guide.appData = APP.meta.apps[guide.application];
             }
+            // shuffle the guides 
+            APP.exec.shuffleArr(APP.meta.quickGuides);
             // listeners
             APP.LISTENER.searchInputType();
             APP.LISTENER.searchInputFocus();
             APP.DOM.buildDropdown(APP.meta.quickGuides);
             APP.DOM.buildAppSearchDropdown(APP.exec.searchApps('&&ALL'));
 
+        },
+        shuffleArr: arr => {
+            let currentIndex = arr.length,  randomIndex;
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                // And swap it with the current element.
+                [arr[currentIndex], arr[randomIndex]] = [
+                arr[randomIndex], arr[currentIndex]];
+            }
+            return arr;
         },
         searchGuides: query => {
             query = query.trim().toLowerCase();
@@ -40,7 +55,11 @@ const APP = {
                     continue
                 };
                 if(guide.name.toLowerCase().includes(query)){
-                    results.push(guide);
+                    if(guide.origin === "Training & Learning Center"){
+                        results.unshift(guide);
+                    } else {
+                        results.push(guide);
+                    }
                     continue
                 };
                 let keyWordFound = false;
@@ -56,22 +75,35 @@ const APP = {
             return results;
         },
         searchApps: query => {
-            query = query.trim();
+            query = query.trim().toLowerCase();
 
             let results = [];
             if(!query){return results};
             for(let app in APP.meta.apps){
-                if(query === "&&ALL"){
+                if(query.toUpperCase() === "&&ALL"){
                     results.push(APP.meta.apps[app]);
                     continue
                 }
                 let title = app.toLowerCase();
                 if(title.includes(query.toLowerCase())){
                     results.push(APP.meta.apps[app]);
+                    continue
                 }
-                
+                let keyWordFound = false;
+                for(let keyword of APP.meta.apps[app].keywords){
+                    if(keyWordFound){ continue }
+                    if(keyword.includes(query) || keyword.startsWith(query)){
+                        results.push(APP.meta.apps[app]);
+                        keyWordFound = true;
+                        continue
+                    };
+                }
             }
             return results
+        },
+        noSearchResultsFound: () => {
+            console.log(`nothing found for ${APP.element.search.input.value}`)
+            APP.DOM.createSearchGoogleHTML(APP.element.search.input.value);
         }
     },
     DOM: {
@@ -86,10 +118,12 @@ const APP = {
             for(let item of itemArr){
                 html+= APP.DOM.createDropdownItemHTML(item);
             }
+            APP.element.search.dropdown.list.innerHTML = html;
             if(itemArr.length === 0){
                 html = ``;
+                APP.element.search.dropdown.list.innerHTML = html;
+                APP.exec.noSearchResultsFound();
             }
-            APP.element.search.dropdown.list.innerHTML = html;
         },
         buildAppSearchDropdown: itemArr => {
             let html = `<span class="list-title">Applications & Services</span>`;
@@ -144,7 +178,28 @@ const APP = {
             </li>
             `
         },
-        
+        createSearchGoogleHTML: query => {
+            let encodedQuery = query.trim().toLowerCase().split(' ').join('+');
+            let googleURL = `https://www.google.com/search?q=${encodedQuery}&safe=active`;
+            html =`
+            <li>
+                <a target="_blank" href="${googleURL}">
+                    <div class="icon-container" data-type="searchWeb">
+                        <img class="icon" src="./image/applications/searchWeb.svg">
+                    </div>
+                    <div class="link-label">
+                        <span class="link-title">Discover solutions for <span class="link-search-query">${query}</span></span>
+                        <div class="link-meta">
+                        <span class="link-origin" data-origin="internet_search">Search the Web</span>
+                        <span class="link-application" data-app="Google">Google</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            `
+            let temp = APP.element.search.dropdown.list.innerHTML;
+            APP.element.search.dropdown.list.innerHTML = temp + html;
+        }
     },
     LISTENER: {
         searchInputType: () => {

@@ -1,0 +1,38 @@
+@media (max-width: 1000px) {
+    .col-1.search-container {
+        max-width: 100%;
+        padding: 0% 5%;
+        margin-bottom: 3vh;
+    }
+    .col-2 {
+        padding: 0% 5%;
+        flex-direction: column;
+    }
+    .widget {
+        flex-direction: column;
+        margin: 0;
+        width: 90%;
+        max-width: 90%;
+        margin-bottom: 2vh;
+        text-align:center;
+    }
+    .content {
+        width: 100%!important;
+    }
+    .subtext, .title {
+        margin: 0!important;
+    }
+    span.title {
+        padding: 10px 0px;
+        font-size: 2em!important;
+    }
+    .widget img {
+        max-width: 100%!important;
+        margin: 0 auto;
+    }
+    .search-dropdown {
+        width: 112%;
+        max-height: 70vh;
+        margin-left: -8vw;
+    }
+}

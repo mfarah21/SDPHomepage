@@ -50,7 +50,7 @@ header img {
 }
 .search::after {
     content: "";
-    background: url(./image/search.svg) no-repeat;
+    background: url(../image/search.svg) no-repeat;
     width: 17px;
     height: 17px;
     right: 25px;
@@ -186,11 +186,21 @@ span.link-application {
     margin-left: 7px;
     opacity: 0.8;
 }
+.link-search-query {
+    color: #838383;
+    font-style: italic;
+    text-shadow: 2px 1px 3px rgb(255 255 255 / 50%);
+}
 /* Link meta colors */
 [data-origin="Training & Learning Center"] {
     background: #dbffea;
     border: 1px solid #87f1c5!important;
     color: #14a03c;
+}
+[data-origin="internet_search"] {
+    background: #f1a312;
+    border: 1px solid #f1a312!important;
+    color: #fff;
 }
 [data-origin="Vendor Documentation"] {
     background: #9e9990;
@@ -206,6 +216,21 @@ span.link-application {
     background: #dbffea;
     border: 1px solid #87f1c5!important;
     color: #14a03c;
+}
+[data-app="Google"] {
+    background: #34a853;
+    border: 1px solid #34a853;
+    border-image-slice: 1;
+    opacity:1;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+}
+[data-app="Firefox"] {
+    background: #ffd3d2;
+    border: 1px solid #ff3029;
+    color: #ff3029;
+    font-weight: bold;
 }
 [data-app="Email"] {
     background: #fff;
@@ -252,25 +277,50 @@ span.link-application {
     border: 1px solid #95d1ff;
     color: #0f2f5a;
 }
+[data-app="Adobe Acrobat"] {
+    background: #e20025;
+    border: 1px solid #e20025;
+    color: #fff;
+}
 [data-app="Microsoft 365"] {
     background: #ff6600;
     border: 1px solid #ff6600;
     color: #fff;
 }
+[data-app="Microsoft Excel"] {
+    background: #007133;
+    border: 1px solid #007133;
+    color: #fff;
+}
+[data-app="Microsoft PowerPoint"] {
+    background: #dc5b26;
+    border: 1px solid #dc5b26;
+    color: #fff;
+}
 [data-app="Microsoft Word"] {
-    background: #ffffff;
+    background: #065999;
     border: 1px solid #065999;
-    color: #065999;
+    color: #fff;
+}
+[data-app="Microsoft Outlook"] {
+    background: #0078d4;
+    border: 1px solid #0078d4;
+    color: #fff;
 }
 [data-app="Microsoft OneDrive"] {
-    background: #ffffff;
+    background: #0078d4;
     border: 1px solid #0078d4;
-    color: #0078d4;
+    color: #fff;
 }
 [data-app="Microsoft Teams"] {
-    background: #ffffff;
+    background: #7071bb;
     border: 1px solid #7071bb;
-    color: #7071bb;
+    color: #fff;
+}
+[data-app="Power BI"] {
+    background: #edbd11;
+    border: 1px solid #edbd11;
+    color: #fff;
 }
 img.icon {
     max-width: 100%;
@@ -282,6 +332,9 @@ img.icon {
 /* Search Drop down datatypes */
 [data-type="quickGuide"]::after {
     content: 'Quick Guide';
+}
+[data-type="searchWeb"]::after {
+    content: 'Help';
 }
 [data-type="vendorDoc"]::after {
     content: 'External Doc';
