@@ -30,16 +30,34 @@ const APP = {
 
         },
         searchGuides: query => {
+            query = query.trim().toLowerCase();
+
             let results = []
             if(!query){ return results };
             for(let guide of APP.meta.quickGuides){
-                if(guide.name.toLowerCase().includes(query.toLowerCase())){
+                if(query.toUpperCase() === "&&ALL"){
                     results.push(guide);
+                    continue
+                };
+                if(guide.name.toLowerCase().includes(query)){
+                    results.push(guide);
+                    continue
+                };
+                let keyWordFound = false;
+                for(let keyword of guide.keywords){
+                    if(keyWordFound){ continue }
+                    if(keyword.includes(query) || keyword.startsWith(query)){
+                        results.push(guide);
+                        keyWordFound = true;
+                        continue
+                    };
                 }
             }
             return results;
         },
         searchApps: query => {
+            query = query.trim();
+
             let results = [];
             if(!query){return results};
             for(let app in APP.meta.apps){
@@ -68,6 +86,9 @@ const APP = {
             for(let item of itemArr){
                 html+= APP.DOM.createDropdownItemHTML(item);
             }
+            if(itemArr.length === 0){
+                html = ``;
+            }
             APP.element.search.dropdown.list.innerHTML = html;
         },
         buildAppSearchDropdown: itemArr => {
@@ -82,7 +103,9 @@ const APP = {
         },
         createDropdownItemHTML: item => {
             const types = {
-                quickGuide: `./image/paper.svg`
+                quickGuide: `./image/paper.svg`,
+                vendorDoc: `./image/paper.svg`,
+                video: `./image/video.png`
             }
             return `
             <li>

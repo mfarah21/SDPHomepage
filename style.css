@@ -192,6 +192,11 @@ span.link-application {
     border: 1px solid #87f1c5!important;
     color: #14a03c;
 }
+[data-origin="Vendor Documentation"] {
+    background: #9e9990;
+    border: 1px solid #9e9990!important;
+    color: #fdf5e6;
+}
 [data-origin="application"] {
     background: rgb(224 224 224 / 53%);
     border: 1px solid #9e9e9e!important;
@@ -206,6 +211,11 @@ span.link-application {
     background: #fff;
     border: 1px solid #009bff;
     color: #009bff;
+}
+[data-app="Formstack"] {
+    background: #21b573;
+    border: 1px solid #21b573;
+    color: #fff;
 }
 [data-app="Cloud"] {
     background: rgb(179 246 255 / 75%);
@@ -242,6 +252,11 @@ span.link-application {
     border: 1px solid #95d1ff;
     color: #0f2f5a;
 }
+[data-app="Microsoft 365"] {
+    background: #ff6600;
+    border: 1px solid #ff6600;
+    color: #fff;
+}
 [data-app="Microsoft Word"] {
     background: #ffffff;
     border: 1px solid #065999;
@@ -267,6 +282,14 @@ img.icon {
 /* Search Drop down datatypes */
 [data-type="quickGuide"]::after {
     content: 'Quick Guide';
+}
+[data-type="vendorDoc"]::after {
+    content: 'External Doc';
+}
+[data-type="video"]::after {
+    content: 'Video';
+}
+[data-type]::after {
     font-size: 0.6em;
     text-align: center;
     display: flex;
