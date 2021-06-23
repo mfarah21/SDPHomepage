@@ -13,6 +13,118 @@
 // Paste below
 const guidesData = [
     {
+        "name": "How to Access the CSCF Cloud from any Computer",
+        "url": "https://careersourcecf.sharepoint.com/sites/TheSource/Information%20Technology%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FTheSource%2FInformation%20Technology%20Documents%2FIT%20Tutorials%2FTutorial%20%2D%20How%20to%20access%20the%20CSCF%20Cloud%20from%20any%20Computer%2Epdf&parent=%2Fsites%2FTheSource%2FInformation%20Technology%20Documents%2FIT%20Tutorials&p=true&originalPath=aHR0cHM6Ly9jYXJlZXJzb3VyY2VjZi5zaGFyZXBvaW50LmNvbS86Yjovcy9UaGVTb3VyY2UvRVk0V2w0MWdlNnBNbzhtdzNKZ3pJN1FCXzZVV0tFcWhZaDg4Qk9aOVprWFBRUT9ydGltZT1Pa1doWDYwMTJVZw",
+        "type": "quickGuide",
+        "origin": "Training & Learning Center",
+        "application": "Cloud",
+        "keywords": ['cscf cloud']
+    },
+    {
+        "name": "How to Collaborate with Co-workers using OneDrive",
+        "url": "https://support.microsoft.com/en-us/office/share-files-and-folders-in-onedrive-personal-3fcefa26-1371-401e-8c04-589de81ed5eb",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "Microsoft OneDrive",
+        "keywords": ['files', 'upload']
+    },
+    {
+        "name": "How to Share or Sync Files & Folders with OneDrive",
+        "url": "https://support.microsoft.com/en-us/office/share-files-and-folders-with-microsoft-365-business-72f26d6c-bf9e-432c-8b96-e3c2437f5b65?wt.mc_id=otc_onedrive",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "Microsoft OneDrive",
+        "keywords": ['files', 'upload']
+    },
+    {
+        "name": "How to Manage Files & Folders with OneDrive",
+        "url": "https://support.microsoft.com/en-us/office/upload-files-and-folders-in-onedrive-work-or-school-5bd927ad-d186-495c-93e8-7ca116fe7b83?wt.mc_id=otc_onedrive",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "Microsoft OneDrive",
+        "keywords": ['files', 'upload']
+    },
+    {
+        "name": "Introduction to Microsoft OneDrive",
+        "url": "https://support.microsoft.com/en-us/office/what-is-onedrive-work-or-school-10f5c3fd-b0f6-40e2-9059-04735ffe01b7?wt.mc_id=otc_onedrive",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "Microsoft OneDrive",
+        "keywords": ['files', 'upload']
+    },
+    {
+        "name": "How to Schedule a Webinar with Zoom",
+        "url": "https://www.youtube.com/embed/dz4KVADtZxg?rel=0&autoplay=1",
+        "type": "video",
+        "origin": "Vendor Documentation",
+        "application": "Zoom",
+        "keywords": ['skype', 'zoom', 'meeting', 'chat', 'talk', 'facetime', 'video chat', 'video', 'teams call', 'teams', 'conference', 'webex', 'web chat']
+    },
+    {
+        "name": "How to Share Multiple Screens Simultaneously with Zoom",
+        "url": "https://www.youtube.com/embed/pt-tcvaQ9I4?rel=0&autoplay=1",
+        "type": "video",
+        "origin": "Vendor Documentation",
+        "application": "Zoom",
+        "keywords": ['skype', 'share screen', 'zoom', 'meeting', 'chat', 'talk', 'facetime', 'video chat', 'video', 'teams call', 'teams', 'conference', 'webex', 'web chat']
+    },
+    {
+        "name": "How to Use Meeting Controls in Zoom",
+        "url": "https://www.youtube.com/embed/ygZ96J_z4AY?rel=0&autoplay=1",
+        "type": "video",
+        "origin": "Vendor Documentation",
+        "application": "Zoom",
+        "keywords": ['skype', 'zoom', 'meeting', 'chat', 'talk', 'facetime', 'video chat', 'video', 'teams call', 'teams', 'conference', 'webex', 'web chat']
+    },
+    {
+        "name": "How to Schedule a Meeting With Zoom",
+        "url": "https://www.youtube.com/embed/XhZW3iyXV9U?rel=0&autoplay=1",
+        "type": "video",
+        "origin": "Vendor Documentation",
+        "application": "Zoom",
+        "keywords": ['skype', 'zoom', 'meeting', 'chat', 'talk', 'facetime', 'video chat', 'video', 'teams call', 'teams', 'conference', 'webex', 'web chat']
+    },
+    {
+        "name": "How to Share Your Screen With Zoom",
+        "url": "https://www.youtube.com/embed/YA6SGQlVmcA?rel=0&autoplay=1",
+        "type": "video",
+        "origin": "Vendor Documentation",
+        "application": "Zoom",
+        "keywords": ['skype', 'share screen', 'zoom', 'meeting', 'chat', 'talk', 'facetime', 'video chat', 'video', 'teams call', 'teams', 'conference', 'webex', 'web chat']
+    },
+    {
+        "name": "Joining & Configuring Audio & Video",
+        "url": "https://www.youtube.com/embed/-s76QHshQnY?rel=0&autoplay=1",
+        "type": "video",
+        "origin": "Vendor Documentation",
+        "application": "Zoom",
+        "keywords": ['skype', 'zoom', 'meeting', 'chat', 'talk', 'facetime', 'video chat', 'video', 'teams call', 'teams', 'conference', 'webex', 'web chat']
+    },
+    {
+        "name": "How to Join a Zoom Meeting",
+        "url": "https://www.youtube.com/embed/hIkCmbvAHQQ?rel=0&autoplay=1",
+        "type": "video",
+        "origin": "Vendor Documentation",
+        "application": "Zoom",
+        "keywords": ['skype', 'zoom', 'meeting', 'chat', 'talk', 'facetime', 'video chat', 'video', 'teams call', 'teams', 'conference', 'webex', 'web chat']
+    },
+    {
+        "name": "How to Set Do Not Disturb on iPhone",
+        "url": "https://support.apple.com/guide/iphone/set-do-not-disturb-iph5c3f5b77b/14.0/ios/14.0",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "iPhone",
+        "keywords": ['ios', 'vibrate', 'silence', 'volume']
+    },
+    {
+        "name": "How to use iPhone",
+        "url": "https://support.apple.com/guide/iphone/welcome/ios",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "iPhone",
+        "keywords": ['ios']
+    },
+    {
         "name": "Understanding Dashboards, Reports, and Apps in Power BI",
         "url": "https://docs.microsoft.com/en-us/learn/modules/explore-power-bi-service/3-navigate-content",
         "type": "vendorDoc",
@@ -181,7 +293,7 @@ const guidesData = [
         "keywords": ['spreadsheet', 'google sheet']
     },
     {
-        "name": "How to Collaborate with other Staff in Excel",
+        "name": "How to Collaborate with Co-workers in Excel",
         "url": "https://support.microsoft.com/en-us/office/collaborate-in-excel-a8af741e-00f2-44c0-a94b-38abd51af01f?wt.mc_id=fsn_excel_quick_start&ui=en-us&rs=en-us&ad=us",
         "type": "vendorDoc",
         "origin": "Vendor Documentation",
@@ -209,7 +321,7 @@ const guidesData = [
         "url": "https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/GoToConnect-Phone.aspx",
         "type": "quickGuide",
         "origin": "Training & Learning Center",
-        "application": "Desk Phone",
+        "application": "Cloud Phone",
         "keywords": ['gotoconnect', 'jive', 'connect phone', 'phone app', 'cloud phone app']
     },
     {
@@ -243,6 +355,14 @@ const guidesData = [
         "origin": "Vendor Documentation",
         "application": "Microsoft PowerPoint",
         "keywords": ['presentation', 'slide', 'slideshow', 'template', 'slidedeck']
+    },
+    {
+        "name": "Microsoft Edge Quick Tips Guide",
+        "url": "https://microsoftedgetips.microsoft.com/en-us/?source=support&form=MA13DX",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "Microsoft Edge",
+        "keywords": ['internet', 'browser', 'explorer', 'help']
     },
     {
         "name": "How to Search Inside a Webpage with Firefox Web Browser",
@@ -354,7 +474,7 @@ const guidesData = [
         "type": "quickGuide",
         "origin": "Training & Learning Center",
         "application": "Microsoft Teams",
-        "keywords": []
+        "keywords": ['share screen', 'present', 'show screen']
     },
     {
         "name": "How to Use OneDrive at CSCF",
@@ -409,8 +529,8 @@ const guidesData = [
         "url": "https://careersourcecf.sharepoint.com/sites/TheSource/_layouts/15/guestaccess.aspx?e=OsdfgT&share=EYEC_SoZXYxDvzC5lYLumVoBhGGsjiNbknQDJymUyO9T4g",
         "type": "quickGuide",
         "origin": "Training & Learning Center",
-        "application": "Desk Phone",
-        "keywords": []
+        "application": "Cloud Phone",
+        "keywords": ['cloud phone', 'desk phone']
     },
     {
         "name": "How to Prepare Equipment for Hurricane Warnings",

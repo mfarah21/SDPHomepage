@@ -14,7 +14,203 @@ img {
 body {
     background: url(https://www.careersourcecentralflorida.com/wp-content/uploads/cscf_background_geometric_triangles_blue-1.jpg) no-repeat center center fixed;
     background-size: cover;
+    position: relative;
 }
+/* Modals */
+.modal-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 10%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-app-display {
+    background: rgb(255 255 255 / 65%);
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(20px) saturate(100%);
+    -webkit-backdrop-filter: blur(20px) saturate(100%);
+    box-shadow: 8px 7px 11px rgb(0 0 0 / 5%), 20px 18px 80px rgb(0 0 0 / 15%);
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+.modal-photo-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255 255 255 / 75%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+}
+.modal-photo-view img {
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow: -2px 2px 7px rgb(0 0 0 / 15%), 30px 30px 110px rgb(0 0 0 / 25%);
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: transparent;
+    color: rgb(0 0 0 / 25%);
+    transition: all 0.2s ease-in-out;
+}
+.modal-close:hover {
+    background: radial-gradient(rgb(0 0 0 / 16%), transparent);
+    color: rgb(0 0 0 / 55%);
+    box-shadow: -2px 4px 20px rgb(255 255 255 / 25%);
+    cursor: pointer;
+}
+.modal-app-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.modal-app-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+.modal-app-category {
+    font-size: 0.9em;
+    color: rgb(0 0 0 / 25%);
+}
+.modal-app-description {
+    font-size: 1.2em;
+    color: rgb(0 0 0 / 55%);
+    margin-top: 30px;
+}
+.modal-app-details-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    box-sizing: border-box;
+    height: 50%;
+}
+.modal-app-details-meta {
+    width: 50%;
+    max-width: 50%;
+}
+.modal-app-details-graphics {
+    display: flex;
+    width: 50%;
+    max-width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+img.modal-app-logo {
+    max-width: 90%;
+    pointer-events: none;
+    max-height: 150px;
+}
+.modal-app-screenshots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.modal-app-screenshots-screenshot {
+    max-width: 30%;
+    opacity: 0.9;
+    border-radius: 10px;
+    pointer-events: all;
+    box-shadow: 1px 5px 13px rgb(0 0 0 / 15%);
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    -webkit-user-select:none;
+    user-drag: none;
+    -webkit-user-drag:none;
+}
+.modal-app-screenshots-screenshot:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.1);
+}
+.modal-heading {
+    padding: 30px;
+    margin: 0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+.modal-app-details-guides {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 50%;
+}
+.modal-app-assets-cta {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.modal-app-cta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+.modal-app-cta img {
+    box-sizing: border-box;
+    max-width: 60%;
+    margin-bottom: 20px;
+    pointer-events: none;
+}
+.modal-app-cta a.button.red {
+    margin-top: 20px;
+}
+ul.modalGuidesList {
+    overflow-y: scroll!important;
+    width: 70%;
+    color: #1490df;
+    font-size: 1.3em;
+}
+.modalGuidesList li a {
+    padding: 5px!important;
+}
+.modal-app-details-guides li a:hover {
+    background: transparent!important;
+    color: #66bb6a!important;
+    text-decoration: underline;
+}
+.modal-app-details-guides li:first-of-type {
+    border-radius: 10px 10px 0px 0px;
+}
+.modal-app-details-guides li:last-of-type {
+    border-radius: 0px 0px 10px 10px;
+}
+.modal-app-details-guides li {
+    background: rgb(255 255 255 / 50%)!important;
+    border: 0px solid white!important;
+}
+/* END Modals */
 .container {
     width: 100%;
     max-width: 950px;
@@ -28,6 +224,99 @@ header {
 header img {
     width: 250px;
 }
+/* APPS WIDGET */
+.apps-widget-container {
+    background: transparent;
+    padding: 30px;
+    padding-top: 0;
+}
+.widget-apps {
+    background: white;
+    /* background: url(https://www.careersourcecentralflorida.com/wp-content/uploads/white_grid_bg.png) no-repeat center center; */
+    /* background-size: cover; */
+    width: 80%;
+    margin: 0 auto;
+    padding: 0px 60px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 8px 0 rgb(0 0 0 / 25%);
+}
+.widget-apps .widget-apps-title {
+    text-align: left;
+}
+.widget-apps ul.appList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.widget-apps .appList li {
+    width: 19%;
+    border-bottom: 0px;
+    min-height: 125px;
+}
+/* delete this after finished  */
+.widget-apps .appList li:last-of-type {
+    margin-right: auto;
+}
+/* delete this after finished  */
+.widget-apps li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 0px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    pointer-events: all;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.widget-apps li a:hover {
+    background: rgb(0 0 0 / 5%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+.widget-apps li a:hover .link-title {
+    color:#009bff;
+}
+.widget-apps li a:hover .icon {
+    opacity: 1!important;
+    transform: scale(1.25);
+}
+.widget-apps .link-label {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+}
+.widget-apps .appList .icon-container img {
+    opacity: 0.85;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+}
+.widget-apps .appList .icon-container {
+    max-width: 30%;
+    width: 40px;
+    padding-bottom: 10px;
+    pointer-events: none;
+}
+.widget-apps .link-title {
+    margin-bottom: 5px;
+    font-weight: 400;
+    pointer-events: none;
+    color: #494949;
+    font-size: 0.9em;
+    transition: all 0.2s ease-in-out;
+}
+.widget-apps .app-name-highlight {
+    color: #009bff;
+}
+/* END APPS WIDGET */
 .col-1 {
     display: flex;
     flex-direction:column;
@@ -62,7 +351,7 @@ header img {
 }
 .search input:after {
     content: "";
-    background: url(./image/search.svg) no-repeat;
+    background: url(../image/search.svg) no-repeat;
     width: 17px;
     height: 17px;
     right: 25px;
@@ -88,6 +377,7 @@ header img {
     width: 95%;
     background: rgb(255 255 255 / 61%);
     backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     box-shadow: 40px 15px 90px rgb(0 0 0 / 45%);
     border-radius: 0px 0px 20px 20px;
     overflow: hidden;
@@ -96,22 +386,22 @@ header img {
     max-height: 40vh;
 }
 
-.search ul.itemList {
+.search ul.itemList, .modal-app-details-guides ul.itemList {
     display: flex;
     flex-direction: column;
 }
-.search ul {
+.search ul, .modal-app-details-guides ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.search li a:hover {
+.search li a:hover, .modal-app-details-guides li a:hover {
     background: rgba(55, 156, 214, 0.336);
 }
-.search li a:hover .link-meta {
+.search li a:hover .link-meta, .modal-app-details-guides li a:hover .link-meta {
     opacity: 1;
 }
-.search li a {
+.search li a, .modal-app-details-guides li a {
     padding: 25px;
     text-decoration: none;
     color: inherit!important;
@@ -121,13 +411,13 @@ header img {
     transition: all 0.2s ease-in-out;
     align-items: center;
 }
-.search li:last-of-type {
+.search li:last-of-type, .modal-app-details-guides li:last-of-type {
     border-bottom: 0px;
 }
-.search li {
+.search li, .modal-app-details-guides li {
     border-bottom: 2px solid rgb(223 214 214 / 40%);
 }
-.search ul.itemList .list-title {
+.search ul.itemList .list-title, .modal-app-details-guides ul.itemList .list-title {
     font-size: 0.8em;
 }
 span.list-title {
@@ -152,6 +442,7 @@ span.list-title {
 }
 .search .appList li a {
     padding: 5px 25px;
+    cursor: pointer;
 }
 .appList .icon-container {
     max-width: 15%;
@@ -277,6 +568,11 @@ span.link-application {
     border: 1px solid #95d1ff;
     color: #0f2f5a;
 }
+[data-app="Zoom"] {
+    background: #2d8cff;
+    border: 1px solid #2d8cff;
+    color: #fff;
+}
 [data-app="Adobe Acrobat"] {
     background: #e20025;
     border: 1px solid #e20025;
@@ -386,7 +682,7 @@ img.icon {
     height: 100%;
     width: 50%;
 }
-.content .button {
+.button {
     border: none;
     padding: 10px 14px;
     box-sizing: border-box;

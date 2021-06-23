@@ -35,4 +35,80 @@
         max-height: 70vh;
         margin-left: -8vw;
     }
+    /* APPS Widget */
+    .apps-widget-container {
+        background: transparent;
+        padding-top: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0px;
+    }
+    .widget-apps {
+        width: auto;
+        padding: 0;
+    }
+    .widget-apps .widget-apps-title {
+        text-align: center!important;
+        max-width: 80%;
+        margin: 0 auto;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+    .widget-apps .appList li {
+        width: 50%;
+        border-bottom: 0px;
+        min-height: 0;
+    }
+    .modal-app-display {
+        border-radius: 0px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        overflow-y: scroll;
+    }
+    .modal-app-details-content {
+        flex-direction: column;
+        height: auto;
+    }
+    .modal-app-details-meta {
+        width: 100%;
+        max-width: 100%;
+    }
+    .modal-app-details-graphics {
+        width: 100%;
+        max-width: 100%;
+    }
+    .modal-app-screenshots {
+        flex-direction: column;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    img.modal-app-screenshots-screenshot {
+        width: 100%;
+        max-width: 100%;
+        margin: 5vh 0px;
+    }
+    .modal-app-details-guides {
+        height: auto;
+    }
+    h2.modal-heading {
+        padding: 0;
+        text-align: center;
+    }
+    .modal-app-assets-cta {
+        flex-direction: column;
+        height: auto;
+    }
+    ul.modalGuidesList {
+        width: 100%;
+        height: auto;
+        overflow-y: visible!important;
+    }
+    .modalGuidesList li {
+        margin: 5vh 0px;
+        text-align: center;
+    }
+    /* End APPS Widget */
 }

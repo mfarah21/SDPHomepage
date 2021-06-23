@@ -16,6 +16,46 @@
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     </head>
     <body>
+        <div id="fullScreenAppModal" class="modal-fullscreen  hide">
+            <div class="modal-app-display animate__animated animate__fadeIn">
+                <div onclick="APP.DOM.hide(APP.element.modal.fullScreenAppModal.photoView.container)" title="Click anywhere to close photo." class="modal-photo-view hide animate__animated animate__fadeIn">
+                    <img src="https://sdphomepage.careersourcecf.repl.co/image/applications/screenshots/email/email_1.png">
+                </div>
+                <div class="modal-app-details-container">
+                    <div class="modal-app-details-content">
+                        <div class="modal-app-details-meta">
+                            <div class="modal-app-title"></div>
+                            <div class="modal-app-category"></div>
+                            <div class="modal-app-description">
+                            </div>
+                        </div>
+                        <div class="modal-app-details-graphics">
+                            <img class="modal-app-logo" src="">
+                            <div class="modal-app-screenshots">
+                                <img class="modal-app-screenshots-screenshot" src="https://i.imgur.com/GsCZO4I.png">
+                                <img class="modal-app-screenshots-screenshot" src="https://i.imgur.com/GsCZO4I.png">
+                                <img class="modal-app-screenshots-screenshot" src="https://i.imgur.com/GsCZO4I.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-app-details-guides">
+                        <h2 class="modal-heading">Training & Documentation</h2>
+                        <div class="modal-app-assets-cta">
+                            <ul class="modalGuidesList">
+                            </ul>
+                            <div class="modal-app-cta">
+                                <img src="./image/request-widget-bg.svg">
+                                <span>Having a problem with <span id="modalAppCtaName"></span>?</span>
+                                <a target="_blank" class="button red" href="https://helpdesk.cscfl.com/app/itdesk/ui/requests/add">Open a Ticket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fullScreenAppModal--close" class="modal-close" onclick="APP.DOM.dismissModal('fullScreenAppModal')">
+                    <i class="ri-close-fill"></i>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <header class="animate__animated animate__fadeIn">
                 <img src="https://www.careersourcecentralflorida.com/wp-content/uploads/CSCF_IT-DEPT-LOGO-2-White-1.png">
@@ -60,6 +100,13 @@
                         <span class="subtext">I have an</span>
                         <span class="title">Issue</span>
                         <a target="_blank" class="button red" href="https://helpdesk.cscfl.com/app/itdesk/ui/requests/add">Submit a Ticket</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 apps-widget-container animate__animated animate__fadeIn" style="animation-delay:0.75s">
+                <div class="widget-apps">
+                    <h2 class="widget-apps-title">Get quick &amp; instant help<span id="helpTopic"> with: </span></h2>
+                    <div class="hero-app-list">
                     </div>
                 </div>
             </div>
