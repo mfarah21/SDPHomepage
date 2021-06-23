@@ -99,6 +99,9 @@ body {
     font-size: 1.2em;
     color: rgb(0 0 0 / 55%);
     margin-top: 30px;
+    overflow-y: scroll;
+    height: 60%;
+    max-width: 100%;
 }
 .modal-app-details-content {
     display: flex;
@@ -110,6 +113,7 @@ body {
 .modal-app-details-meta {
     width: 50%;
     max-width: 50%;
+    overflow: hidden;
 }
 .modal-app-details-graphics {
     display: flex;
