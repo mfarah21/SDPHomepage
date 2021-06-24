@@ -290,7 +290,8 @@ header img {
     text-decoration: none;
     margin-bottom: 0px;
     padding: 10px 0px;
-    border-radius: 5px;
+    border-radius: 15px;
+    overflow: hidden;
     pointer-events: all;
     transition: all 0.2s ease-in-out;
     cursor: pointer;

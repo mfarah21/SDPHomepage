@@ -381,6 +381,14 @@ const guidesData = [
         "keywords": ['presentation', 'slide', 'slideshow', 'template', 'slidedeck']
     },
     {
+        "name": "Keyboard Shortcuts for Microsoft Edge",
+        "url": "https://support.microsoft.com/en-us/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "Microsoft Edge",
+        "keywords": ['internet', 'browser', 'explorer', 'help']
+    },
+    {
         "name": "Microsoft Edge Quick Tips Guide",
         "url": "https://microsoftedgetips.microsoft.com/en-us/?source=support&form=MA13DX",
         "type": "vendorDoc",
