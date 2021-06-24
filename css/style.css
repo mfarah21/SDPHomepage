@@ -155,6 +155,7 @@ img.modal-app-logo {
 }
 .modal-heading {
     padding: 30px;
+    padding-left: 0px;
     margin: 0;
     padding-bottom: 0;
     margin-bottom: 10px;
@@ -172,6 +173,7 @@ img.modal-app-logo {
     display: flex;
     justify-content: space-between;
     height: 100%;
+    max-height: 80%;
 }
 .modal-app-cta {
     display: flex;
@@ -193,11 +195,25 @@ img.modal-app-logo {
 ul.modalGuidesList {
     overflow-y: scroll!important;
     width: 70%;
-    color: #1490df;
+    color: #032f4c;
     font-size: 1.3em;
 }
+.modalGuidesList .icon-container {
+    display: flex;
+}
 .modalGuidesList li a {
-    padding: 5px!important;
+    padding: 15px!important;
+    border-bottom: 2px solid #f0f0f0;
+}
+.modal-app-details-guides ul li:last-of-type a {
+    border: 0px!important;
+}
+.modalGuidesList [data-type]::after {
+    content: ''!important;
+    display: none;
+}
+span.modal-asset-title {
+    margin-left: 20px;
 }
 .modal-app-details-guides li a:hover {
     background: transparent!important;
@@ -278,18 +294,72 @@ header img {
     pointer-events: all;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    position: relative;
 }
 .widget-apps li a:hover {
-    background: rgb(0 0 0 / 5%);
+    background: rgb(0 0 0 / 2%);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
+/* Shine overlay on hover */
+.widget-apps-app:hover .shineOverlay {
+    opacity: 1;
+}
+.shineOverlay {
+    /* background: linear-gradient(270deg, rgba(255, 255, 255, 0), rgba(23, 209, 255, 0.35), rgb(255 255 255 / 0%)); */
+    /* background: rgb(255,255,255); */
+    background: -moz-linear-gradient(200deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(200deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(200deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1); */
+    background-size: 600% 600%;
+    -webkit-animation: shineOverlay 1.5s ease-in-out infinite;
+    -moz-animation: shineOverlay 1.5s ease-in-out infinite;
+    animation: shineOverlay 1.5s ease-in-out infinite;
+    color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@-webkit-keyframes shineOverlay {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes shineOverlay {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes shineOverlay {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+/* END Shine overlay on hover */
 .widget-apps li a:hover .link-title {
     color:#009bff;
 }
 .widget-apps li a:hover .icon {
     opacity: 1!important;
     transform: scale(1.25);
+}
+.widget-apps li a:hover .icon-container .icon-blur {
+    opacity: 0.5!important;
+}
+.widget-apps .icon-blur {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    filter: blur(20px) saturate(120%) brightness(1.5);
+    opacity: 0!important;
+    transition:0.2s all ease-in-out;
 }
 .widget-apps .link-label {
     margin: 0;
@@ -298,7 +368,7 @@ header img {
     text-align: center;
     pointer-events: none;
 }
-.widget-apps .appList .icon-container img {
+.widget-apps .appList .icon-container .icon {
     opacity: 0.85;
     transition: all 0.2s ease-in-out;
     pointer-events: none;

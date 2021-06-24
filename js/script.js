@@ -4,7 +4,12 @@ const APP = {
     meta: {
         quickGuides: guidesData, // This data pulls from data.js - guides
         apps: applications,       // and apps.js - applications/services
-        appsArr: []
+        appsArr: [],
+        types: {
+                quickGuide: `./image/paper.svg`,
+                vendorDoc: `./image/paper.svg`,
+                video: `./image/video.png`
+        }
     },
     element: {
         search: {
@@ -150,11 +155,16 @@ const APP = {
 
             // reveal the modal
             APP.DOM.openModal('fullScreenAppModal');
+            APP.exec.resetScrollTop();
         },
         openPhotoView: image => {
             APP.element.modal.fullScreenAppModal.photoView.image.src = image;
             APP.DOM.unHide(APP.element.modal.fullScreenAppModal.photoView.container);
         },
+        resetScrollTop: () => {
+            document.querySelector('.modalGuidesList').scrollTop = 0;
+            document.querySelector('.modal-app-description').scrollTop = 0;
+        }
     },
     DOM: {
         hide: el => {
@@ -190,7 +200,10 @@ const APP = {
             APP.element.modal.fullScreenAppModal.title.innerHTML = app.name;
             APP.element.modal.fullScreenAppModal.ctaName.innerHTML = app.name.replace('Microsoft ', '');
             APP.element.modal.fullScreenAppModal.category.innerHTML = app.category;
+            // description
             APP.element.modal.fullScreenAppModal.description.innerHTML = app.description;
+            
+
             APP.element.modal.fullScreenAppModal.logo.src = app.logo;
 
             // build the screenshots list
@@ -212,7 +225,10 @@ const APP = {
                 assetsHTML += `
                 <li class="animate__animated animate__fadeIn" style="animation-delay: ${counter2}ms">
                     <a target="_blank" href="${asset.url}">
-                    ${asset.name}
+                    <div class="icon-container" data-type="${asset.type}">
+                        <img class="icon" src="${APP.meta.types[asset.type]}">
+                    </div>
+                    <span class="modal-asset-title">${asset.name}</span>
                     </a>
                 </li>
                 `
@@ -225,14 +241,20 @@ const APP = {
             let counter = 850;
             for (let app of appsArr){
                 counter += 100;
+                let displayName = app.name.replace('Microsoft ', '');
+                if(app.name === "Microsoft 365"){
+                    displayName = "Microsoft 365";
+                }
                 html += `
                 <li class="animate__animated animate__fadeIn" onclick="APP.exec.launchAppModal('${app.name}')" style="animation-delay: ${counter}ms">
                 <a class="widget-apps-app" target="_blank" title="Learn about ${app.name}" data-app-name="${app.name}" data-href="${app.url}">
-                    <div class="icon-container" data-type="app">
+                    <div class="shineOverlay"></div>
+                    <div class="icon-container" data-type="app" style="position:relative">
+                        <img class="icon icon-blur" src="${app.icon}">
                         <img class="icon" src="${app.icon}">
                     </div>
                     <div class="link-label">
-                        <span class="link-title">${app.name.replace('Microsoft ', '')}</span>
+                        <span class="link-title">${displayName}</span>
                         <!-- 
                         <div class="link-meta">
                         <span class="link-origin" data-origin="application">App</span> 
@@ -283,16 +305,11 @@ const APP = {
             APP.element.search.dropdown.appList.innerHTML = html;
         },
         createDropdownItemHTML: item => {
-            const types = {
-                quickGuide: `./image/paper.svg`,
-                vendorDoc: `./image/paper.svg`,
-                video: `./image/video.png`
-            }
             return `
             <li>
                 <a target="_blank" href="${item.url}">
                     <div class="icon-container" data-type="${item.type}">
-                        <img class="icon" src="${types[item.type]}">
+                        <img class="icon" src="${APP.meta.types[item.type]}">
                     </div>
                     <div class="link-label">
                         <span class="link-title">${item.name}</span>

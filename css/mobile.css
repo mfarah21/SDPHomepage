@@ -59,6 +59,9 @@
         border-bottom: 0px;
         min-height: 0;
     }
+    .shineOverlay {
+        display: none!important;
+    }
     .modal-app-display {
         border-radius: 0px;
         width: 100%;

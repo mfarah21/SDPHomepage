@@ -13,6 +13,30 @@
 // Paste below
 const guidesData = [
     {
+        "name": "How to Share and Sync Files in SharePoint Online",
+        "url": "https://support.office.com/en-us/article/video-create-upload-and-share-files-in-a-document-library-98cb2ff2-c27e-42ea-b055-c2d895f8a5de?wt.mc_id=otc_sharepoint",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "Microsoft SharePoint",
+        "keywords": ['files']
+    },
+    {
+        "name": "How to Create Sites, Posts, and Files in SharePoint Online",
+        "url": "https://support.office.com/en-us/article/video-create-a-team-or-communication-site-551e190a-8fbe-47ae-a88a-798b443c46b1?wt.mc_id=otc_sharepoint",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "Microsoft SharePoint",
+        "keywords": ['files']
+    },
+    {
+        "name": "Introduction to SharePoint Online",
+        "url": "https://support.office.com/en-us/article/video-what-is-sharepoint-online-c17b6824-cc22-478f-8757-497cc6b57121?wt.mc_id=otc_sharepoint",
+        "type": "vendorDoc",
+        "origin": "Vendor Documentation",
+        "application": "Microsoft SharePoint",
+        "keywords": ['files']
+    },
+    {
         "name": "How to Access the CSCF Cloud from any Computer",
         "url": "https://careersourcecf.sharepoint.com/sites/TheSource/Information%20Technology%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FTheSource%2FInformation%20Technology%20Documents%2FIT%20Tutorials%2FTutorial%20%2D%20How%20to%20access%20the%20CSCF%20Cloud%20from%20any%20Computer%2Epdf&parent=%2Fsites%2FTheSource%2FInformation%20Technology%20Documents%2FIT%20Tutorials&p=true&originalPath=aHR0cHM6Ly9jYXJlZXJzb3VyY2VjZi5zaGFyZXBvaW50LmNvbS86Yjovcy9UaGVTb3VyY2UvRVk0V2w0MWdlNnBNbzhtdzNKZ3pJN1FCXzZVV0tFcWhZaDg4Qk9aOVprWFBRUT9ydGltZT1Pa1doWDYwMTJVZw",
         "type": "quickGuide",
