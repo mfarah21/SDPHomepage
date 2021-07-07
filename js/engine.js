@@ -24,7 +24,7 @@ const ENGINE = {
             ENGINE.exec.getActiveInstance();
             // redirect to itdesk if invalid instance option
             if(ENGINE.meta.activeInstance === null || !ENGINE.INSTANCE.hasOwnProperty(ENGINE.meta.activeInstance)){
-                window.location.href = `https://${window.location.hostname}?engine=itdesk`;
+                window.location.href = `https://${window.location.hostname}${window.location.pathname}?engine=itdesk`;
                 return
             }
             // code below runs only if valid query string
