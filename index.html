@@ -19,7 +19,7 @@
         <div id="fullScreenAppModal" class="modal-fullscreen  hide">
             <div class="modal-app-display animate__animated animate__fadeIn">
                 <div onclick="APP.DOM.hide(APP.element.modal.fullScreenAppModal.photoView.container)" title="Click anywhere to close photo." class="modal-photo-view hide animate__animated animate__fadeIn">
-                    <img src="https://sdphomepage.careersourcecf.repl.co/image/applications/screenshots/email/email_1.png">
+                    <img  src="https://sdphomepage.careersourcecf.repl.co/image/applications/screenshots/email/email_1.png">
                 </div>
                 <div class="modal-app-details-container">
                     <div class="modal-app-details-content">
@@ -46,7 +46,7 @@
                             <div class="modal-app-cta animate__animated animate__fadeIn" style="animation-delay: 850ms">
                                 <img src="./image/request-widget-bg.svg">
                                 <span>Having a problem with <span id="modalAppCtaName"></span>?</span>
-                                <a target="_blank" class="button red" href="https://helpdesk.cscfl.com/app/itdesk/ui/requests/add">Open a Ticket</a>
+                                <a id="modalCtaSubmitTicket" target="_blank" class="button red" href="https://helpdesk.cscfl.com/app/itdesk/ui/requests/add">Open a Ticket</a>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
         </div>
         <div class="container">
             <header class="animate__animated animate__fadeIn">
-                <img src="https://www.careersourcecentralflorida.com/wp-content/uploads/CSCF_IT-DEPT-LOGO-2-White-1.png">
+                <img class="header-instance-logo" src="https://www.careersourcecentralflorida.com/wp-content/uploads/CSCF_IT-DEPT-LOGO-2-White-1.png">
             </header>
             <div class="col-1 search-container">
                 <div class="search">
@@ -90,8 +90,8 @@
                     <img src="./image/guides-widget-bg.svg">
                     <div class="content">
                         <span class="subtext">I am looking for</span>
-                        <span class="title">Guides</span>
-                        <a target="_blank" class="button blue" href="https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx">Training &amp Learning</a>
+                        <span id="heroExternalLinkTitle" class="title">Guides</span>
+                        <a id="heroExternalLinkValue" target="_blank" class="button blue" href="https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx">Training &amp Learning</a>
                     </div>
                 </div>
                 <div class="widget animate__animated animate__fadeIn" style="animation-delay:0.5s">
@@ -99,7 +99,7 @@
                     <div class="content">
                         <span class="subtext">I have an</span>
                         <span class="title">Issue</span>
-                        <a target="_blank" class="button red" href="https://helpdesk.cscfl.com/app/itdesk/ui/requests/add">Submit a Ticket</a>
+                        <a id="heroSubmitTicketLink" target="_blank" class="button red" href="https://helpdesk.cscfl.com/app/itdesk/ui/requests/add">Submit a Ticket</a>
                     </div>
                 </div>
             </div>
@@ -111,8 +111,15 @@
                 </div>
             </div>
         </div>
-        <script src="./js/apps.js"></script>
-        <script src="./js/data.js"></script>
+        <!-- BEGIN Data -->
+        <script src="./data/itdesk/apps.js"></script>
+        <script src="./data/itdesk/data.js"></script>
+        <script src="./data/hrhelpdesk/apps.js"></script>
+        <script src="./data/hrhelpdesk/data.js"></script>
+        <!-- END Data -->
+        <!-- Core App -->
+        <script src="./js/engine.js"></script>
         <script src="./js/script.js"></script>
+        <!-- END Core App -->
     </body>
 </html>

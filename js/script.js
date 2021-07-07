@@ -2,8 +2,8 @@
 // created 2021-06-17
 const APP = {
     meta: {
-        quickGuides: guidesData, // This data pulls from data.js - guides
-        apps: applications,       // and apps.js - applications/services
+        quickGuides: ENGINE.DATA.quickGuides, // This data pulls from data.js - guides
+        apps: ENGINE.DATA.apps,       // and apps.js - applications/services
         appsArr: [],
         types: {
                 quickGuide: `./image/paper.svg`,
