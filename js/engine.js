@@ -41,6 +41,7 @@ const ENGINE = {
             const isEmbedMode = url.searchParams.get("embed");
             if(isEmbedMode === "true"){
                 ENGINE.meta.isEmbedMode = true;
+                document.body.dataset.isEmbedMode = true;
             }
             // set the active instance in the object
             ENGINE.meta.activeInstance = activeInstance;
