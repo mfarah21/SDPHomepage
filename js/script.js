@@ -8,6 +8,7 @@ const APP = {
         types: {
                 quickGuide: `./image/paper.svg`,
                 vendorDoc: `./image/paper.svg`,
+                vendorLink: `./image/vendorLink.svg`,
                 video: `./image/video.png`
         }
     },

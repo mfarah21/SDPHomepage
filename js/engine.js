@@ -22,7 +22,7 @@ const ENGINE = {
             console.log('/js/engine.js connected.');
             // set active instance
             ENGINE.exec.getActiveInstance();
-            // redirect to itdesk if invalid instance option
+            // redirect to itdesk if invalid or no instance option
             if(ENGINE.meta.activeInstance === null || !ENGINE.INSTANCE.hasOwnProperty(ENGINE.meta.activeInstance)){
                 window.location.href = `https://${window.location.hostname}${window.location.pathname}?engine=itdesk`;
                 return

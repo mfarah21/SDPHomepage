@@ -32,7 +32,8 @@ body {
 .modal-app-display {
     background: rgb(255 255 255 / 65%);
     width: 90%;
-    height: 90%;
+    max-height: 90%;
+    height: 600px;
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
@@ -563,6 +564,11 @@ span.link-application {
     border: 1px solid #87f1c5!important;
     color: #14a03c;
 }
+[data-origin="Go to Link"] {
+    background: #dbffea;
+    border: 1px solid #87f1c5!important;
+    color: #14a03c;
+}
 [data-origin="internet_search"] {
     background: #f1a312;
     border: 1px solid #f1a312!important;
@@ -691,6 +697,17 @@ span.link-application {
 [data-app="Power BI"] {
     background: #edbd11;
     border: 1px solid #edbd11;
+    color: #fff;
+}
+/* HR Apps */
+[data-app="ADP"] {
+    background: #d0271d;
+    border: 1px solid #d0271d;
+    color: #fff;
+}
+[data-app="Principal"] {
+    background: #035fa4;
+    border: 1px solid #035fa4;
     color: #fff;
 }
 img.icon {

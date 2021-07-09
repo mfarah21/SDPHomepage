@@ -477,6 +477,14 @@ const guidesData = [
         "keywords": ['login', 'log on', 'log']
     },
     {
+        "name": "How to Sign in to Office Apps on Desktop",
+        "url": "https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/How-to-Sign-in-to-Office-Apps-on-Desktop.aspx",
+        "type": "quickGuide",
+        "origin": "Training & Learning Center",
+        "application": "Microsoft 365",
+        "keywords": ['login', 'log on', 'log', 'signin', 'desktop', 'word', 'powerpoint', 'excel', 'desktop']
+    },
+    {
         "name": "When to use the CSCF Cloud",
         "url": "https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/When-to-use-the-CSCF-Cloud.aspx",
         "type": "quickGuide",
