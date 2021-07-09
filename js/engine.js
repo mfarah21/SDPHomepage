@@ -1,6 +1,7 @@
 const ENGINE = {
     meta: {
         activeInstance: null,
+        isEmbedMode: null,
     },
     element: {
         body: document.querySelector('body'),
@@ -37,7 +38,10 @@ const ENGINE = {
             // get the instance from the query params
             const url = new URL(window.location.href);
             const activeInstance = url.searchParams.get("engine");
-
+            const isEmbedMode = url.searchParams.get("embed");
+            if(isEmbedMode === "true"){
+                ENGINE.meta.isEmbedMode = true;
+            }
             // set the active instance in the object
             ENGINE.meta.activeInstance = activeInstance;
 
@@ -88,6 +92,29 @@ const ENGINE = {
                 // set IT Guides and Apps
                 ENGINE.DATA.quickGuides = guidesData;
                 ENGINE.DATA.apps = applications;
+
+                //if embeded, run custom code
+                if(ENGINE.meta.isEmbedMode){
+                    console.log('Running embeded operations..');
+                    hiddenElements = [
+                        document.querySelector('#heroTilesResourcesTickets'), // hero tiles
+                        document.querySelector('header') // header
+                    ]
+                    // hide the hero tiles
+                    hiddenElements.map(el => el.classList.add('hide'));
+
+                    // removeBackground
+                    document.querySelector('body').style.background ="white";
+
+                    // style the search container
+                    document.querySelector('.search-container').setAttribute('style', `
+                        padding: 0% 10%;
+                        max-width: 100%;
+                        margin: 0 auto;
+                        box-sizing: border-box;
+                        margin-bottom: 10px;
+                    `);
+                }
             }
         }
     },
