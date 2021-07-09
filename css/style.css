@@ -12,7 +12,7 @@ img {
     pointer-events: none;
 }
 body {
-    background: url(https://www.careersourcecentralflorida.com/wp-content/uploads/cscf_background_geometric_triangles_blue-1.jpg) no-repeat center center fixed;
+    background: white;
     background-size: cover!important;
     position: relative;
 }
