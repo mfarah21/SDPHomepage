@@ -13,7 +13,7 @@ img {
 }
 body {
     background: url(https://www.careersourcecentralflorida.com/wp-content/uploads/cscf_background_geometric_triangles_blue-1.jpg) no-repeat center center fixed;
-    background-size: cover;
+    background-size: cover!important;
     position: relative;
 }
 /* Modals */
@@ -706,8 +706,8 @@ span.link-application {
     color: #fff;
 }
 [data-app="Principal"] {
-    background: #035fa4;
-    border: 1px solid #035fa4;
+    background: #0281e2;
+    border: 1px solid #0281e2;
     color: #fff;
 }
 img.icon {
