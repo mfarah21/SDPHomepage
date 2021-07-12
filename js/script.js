@@ -36,6 +36,7 @@ const APP = {
                 logo: document.querySelector('#fullScreenAppModal .modal-app-logo'),
                 description: document.querySelector('#fullScreenAppModal .modal-app-description'),
                 screenshots: document.querySelector('#fullScreenAppModal .modal-app-screenshots'),
+                openTicketBtn: document.querySelector('#fullScreenAppModal #modalOpenTicketBtn'),
                 photoView: {
                     container: document.querySelector('.modal-photo-view'),
                     image: document.querySelector('.modal-photo-view img')
@@ -235,6 +236,16 @@ const APP = {
                 `
             }
             APP.element.modal.fullScreenAppModal.guidesList.innerHTML = assetsHTML;
+
+            // if showOpenTicketModal is true
+            console.log(`${app.name}:: app.showOpenTicketBtn is set to: ${app.showOpenTicketBtn}`);
+            if(!app.showOpenTicketBtn){
+                // Hide the open ticket btn
+                APP.element.modal.fullScreenAppModal.openTicketBtn.classList.add('hide')
+            } else {
+                // show the open ticket btn
+                APP.element.modal.fullScreenAppModal.openTicketBtn.classList.remove('hide')
+            }
         },
         buildWidgetAppsList: appsArr => {
             // This function builds a gallery of apps widget
@@ -272,11 +283,11 @@ const APP = {
             // assign the listeners to the apps
             for(let app of document.querySelectorAll('.widget-apps-app')){
                 app.addEventListener('mouseover', function(){
-                    console.log(this.dataset.appName + ' in');
+                    // console.log(this.dataset.appName + ' in');
                     APP.element.appWidget.helpTopic.innerHTML = ' with: ' + `<span class="app-name-highlight animate__animated animate__fadeIn">${this.dataset.appName}</span>`;
                 });
                 app.addEventListener('mouseout', function(){
-                    console.log(this.dataset.appName + ' out');
+                    // console.log(this.dataset.appName + ' out');
                     APP.element.appWidget.helpTopic.innerHTML = ' with: ';
                 });
             }

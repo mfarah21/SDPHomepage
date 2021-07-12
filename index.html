@@ -16,7 +16,7 @@
         <link href="https://www.careersourcecentralflorida.com/modules/animate/animate.min.css" rel="stylesheet" type="text/css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     </head>
-    <body data-is-embed-mode="false">
+    <body data-is-embed-mode="false" data-engine="null">
         <div id="fullScreenAppModal" class="modal-fullscreen  hide">
             <div class="modal-app-display animate__animated animate__fadeIn">
                 <div onclick="APP.DOM.hide(APP.element.modal.fullScreenAppModal.photoView.container)" title="Click anywhere to close photo." class="modal-photo-view hide animate__animated animate__fadeIn">
@@ -44,7 +44,7 @@
                         <div class="modal-app-assets-cta">
                             <ul class="modalGuidesList">
                             </ul>
-                            <div class="modal-app-cta animate__animated animate__fadeIn" style="animation-delay: 850ms">
+                            <div id="modalOpenTicketBtn" class="modal-app-cta animate__animated animate__fadeIn" style="animation-delay: 850ms">
                                 <img src="./image/request-widget-bg.svg">
                                 <span>Having a problem with <span id="modalAppCtaName"></span>?</span>
                                 <a id="modalCtaSubmitTicket" target="_blank" class="button red" href="https://helpdesk.cscfl.com/app/itdesk/ui/requests/add">Open a Ticket</a>

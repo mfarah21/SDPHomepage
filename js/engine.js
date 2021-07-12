@@ -46,6 +46,9 @@ const ENGINE = {
             // set the active instance in the object
             ENGINE.meta.activeInstance = activeInstance;
 
+            // set the active instance in the body dataset
+            document.body.dataset.engine = activeInstance;
+
             // return the value
             console.log(`activeInstance set to ${activeInstance}`);
             return activeInstance

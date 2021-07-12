@@ -12,7 +12,8 @@ const applications = {
         keywords: ['skype', 'share screen', 'webinar', 'meeting', 'talk', 'facetime', 'video chat', 'video', 'teams call', 'teams', 'conference', 'webex', 'web chat', 'im', 'message', 'contact', 'chat'],
         screenshots: ['./image/applications/screenshots/microsoft_teams/microsoft_teams_1.png', './image/applications/screenshots/microsoft_teams/microsoft_teams_2.png', './image/applications/screenshots/microsoft_teams/microsoft_teams_3.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-teams-%28instant-message%29`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-teams-%28instant-message%29`,
+        showOpenTicketBtn: true
     },
     "Microsoft Outlook": {
         name: `Microsoft Outlook`,
@@ -24,7 +25,8 @@ const applications = {
         keywords: ['email', '.msg', 'e-mail', 'message'],
         screenshots: ['./image/applications/screenshots/microsoft_outlook/microsoft_outlook_1.png', './image/applications/screenshots/microsoft_outlook/microsoft_outlook_2.png', './image/applications/screenshots/microsoft_outlook/microsoft_outlook_3.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-outlook-(email-client)`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-outlook-(email-client)`,
+        showOpenTicketBtn: true
     },
     "Microsoft OneDrive": {
         name: `Microsoft OneDrive`,
@@ -37,7 +39,8 @@ const applications = {
         screenshots: ['./image/applications/screenshots/microsoft_onedrive/microsoft_onedrive_2.png', './image/applications/screenshots/microsoft_onedrive/microsoft_onedrive_3.png',
         './image/applications/screenshots/microsoft_onedrive/microsoft_onedrive_1.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#onedrive-%28saving-and-sharing-files%29`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#onedrive-%28saving-and-sharing-files%29`,
+        showOpenTicketBtn: true
     },
     "Microsoft Edge": {
         name: `Microsoft Edge`,
@@ -49,7 +52,8 @@ const applications = {
         keywords: ['office.com', 'office', 'office 365', '365', 'online', 'internet'],
         screenshots: ['./image/applications/screenshots/microsoft_edge/microsoft_edge_1.png', './image/applications/screenshots/microsoft_edge/microsoft_edge_2.png', './image/applications/screenshots/microsoft_edge/microsoft_edge_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`,
+        showOpenTicketBtn: true
     },
     "iPhone": {
         name: `iPhone`,
@@ -61,7 +65,8 @@ const applications = {
         keywords: ['ios', 'apple', 'cell phone', 'cell'],
         screenshots: ['./image/applications/screenshots/iphone/iphone_1.png', './image/applications/screenshots/iphone/iphone_2.png', './image/applications/screenshots/iphone/iphone_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#cscf-phones-%28iphone-desk-phone%29`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#cscf-phones-%28iphone-desk-phone%29`,
+        showOpenTicketBtn: true
     },
     "Windows": {
         name: `Windows`,
@@ -73,7 +78,8 @@ const applications = {
         keywords: ['desktop', 'operating system', 'os', 'linux'],
         screenshots: ['./image/applications/screenshots/windows/windows_1.png', './image/applications/screenshots/windows/windows_2.png', './image/applications/screenshots/windows/windows_3.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`,
+        showOpenTicketBtn: true
     },
     "Hardware": {
         name: `Hardware`,
@@ -85,7 +91,8 @@ const applications = {
         keywords: ['laptop', 'desktop', 'monitor', 'tv', 'keyboard', 'mouse', 'webcam', 'camera'],
         screenshots: ['./image/applications/screenshots/hardware/hardware_1.png', './image/applications/screenshots/hardware/hardware_2.png', './image/applications/screenshots/hardware/hardware_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`,
+        showOpenTicketBtn: true
     },
     "Cloud Phone": {
         name: `Cloud Phone`,
@@ -97,7 +104,8 @@ const applications = {
         keywords: ['gotoconnect', 'jive', 'cloud phone'],
         screenshots: ['./image/applications/screenshots/cloud_phone/cloud_phone_1.png', './image/applications/screenshots/cloud_phone/cloud_phone_2.png', './image/applications/screenshots/cloud_phone/cloud_phone_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#cscf-phones-%28iphone-desk-phone%29`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#cscf-phones-%28iphone-desk-phone%29`,
+        showOpenTicketBtn: true
     },
     "Zoom": {
         name: `Zoom`,
@@ -109,7 +117,8 @@ const applications = {
         keywords: ['skype', 'share screen', 'webinar', 'meeting', 'chat', 'talk', 'facetime', 'video chat', 'video', 'teams call', 'teams', 'conference', 'webex', 'web chat'],
         screenshots: ['./image/applications/screenshots/zoom/zoom_1.png', './image/applications/screenshots/zoom/zoom_2.png', './image/applications/screenshots/zoom/zoom_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#zoom-(video-conferencing)`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#zoom-(video-conferencing)`,
+        showOpenTicketBtn: true
     },
     "Cloud": {
         name: `Cloud`,
@@ -121,7 +130,8 @@ const applications = {
         keywords: ['vm', 'citrix', 'cloud desktop'],
         screenshots: ['./image/applications/screenshots/cloud/cloud_1.png', './image/applications/screenshots/cloud/cloud_2.png', './image/applications/screenshots/cloud/cloud_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#cscf-cloud-%28virtual-cscf-desktop%29`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#cscf-cloud-%28virtual-cscf-desktop%29`,
+        showOpenTicketBtn: true
     },
     "Microsoft Forms": {
         name: `Microsoft Forms`,
@@ -133,7 +143,8 @@ const applications = {
         keywords: ['forms', 'formstack', 'capture', 'data', 'survey'],
         screenshots: ['./image/applications/screenshots/microsoft_forms/microsoft_forms_1.png', './image/applications/screenshots/microsoft_forms/microsoft_forms_2.png', './image/applications/screenshots/microsoft_forms/microsoft_forms_3.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`,
+        showOpenTicketBtn: true
     },
     "Microsoft PowerPoint": {
         name: `Microsoft PowerPoint`,
@@ -145,7 +156,8 @@ const applications = {
         keywords: ['presentation', 'slide'],
         screenshots: ['./image/applications/screenshots/microsoft_powerpoint/microsoft_powerpoint_1.png', './image/applications/screenshots/microsoft_powerpoint/microsoft_powerpoint_2.png', './image/applications/screenshots/microsoft_powerpoint/microsoft_powerpoint_3.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-powerpoint-(presentation-suite)`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-powerpoint-(presentation-suite)`,
+        showOpenTicketBtn: true
     },
     "Microsoft Word": {
         name: `Microsoft Word`,
@@ -157,7 +169,8 @@ const applications = {
         keywords: ['document', '.docx', '.doc', 'pdf', 'page', 'print'],
         screenshots: ['./image/applications/screenshots/microsoft_word/microsoft_word_1.png', './image/applications/screenshots/microsoft_word/microsoft_word_2.png', './image/applications/screenshots/microsoft_word/microsoft_word_3.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`,
+        showOpenTicketBtn: true
     },
     "Microsoft Excel": {
         name: `Microsoft Excel`,
@@ -169,7 +182,8 @@ const applications = {
         keywords: ['spreadsheet', '.xlsx', '.csv', 'data', 'workbook', 'excell', 'excelll'],
         screenshots: ['./image/applications/screenshots/microsoft_excel/microsoft_excel_1.png', './image/applications/screenshots/microsoft_excel/microsoft_excel_2.png', './image/applications/screenshots/microsoft_excel/microsoft_excel_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-excel-(spreadsheet-tool)`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-excel-(spreadsheet-tool)`,
+        showOpenTicketBtn: true
     },
     "Microsoft SharePoint": {
         name: `Microsoft SharePoint`,
@@ -181,7 +195,8 @@ const applications = {
         keywords: ['spreadsheet', '.xlsx', '.csv', 'data', 'workbook', 'excell', 'excelll'],
         screenshots: ['./image/applications/screenshots/microsoft_sharepoint/microsoft_sharepoint_1.png', './image/applications/screenshots/microsoft_sharepoint/microsoft_sharepoint_2.png', './image/applications/screenshots/microsoft_sharepoint/microsoft_sharepoint_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-excel-(spreadsheet-tool)`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#microsoft-excel-(spreadsheet-tool)`,
+        showOpenTicketBtn: true
     },
     "Microsoft 365": {
         name: `Microsoft 365`,
@@ -193,7 +208,8 @@ const applications = {
         keywords: ['office.com', 'office', 'office 365', '365', 'online', 'internet'],
         screenshots: ['./image/applications/screenshots/microsoft_365/microsoft_365_1.png', './image/applications/screenshots/microsoft_365/microsoft_365_2.png', './image/applications/screenshots/microsoft_365/microsoft_365_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`,
+        showOpenTicketBtn: true
     },
     "Firefox": {
         name: `Firefox`,
@@ -205,7 +221,8 @@ const applications = {
         keywords: ['internet', 'browser', 'google'],
         screenshots: ['./image/applications/screenshots/firefox/firefox_1.png', './image/applications/screenshots/firefox/firefox_2.png', './image/applications/screenshots/firefox/firefox_3.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#mozilla-firefox-%28internet-browser%29`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#mozilla-firefox-%28internet-browser%29`,
+        showOpenTicketBtn: true
     },
     "Email": {
         name: `Email`,
@@ -217,7 +234,8 @@ const applications = {
         keywords: ['outlook', 'email message', 'webmail'],
         screenshots: ['./image/applications/screenshots/email/email_1.png', './image/applications/screenshots/email/email_2.png', './image/applications/screenshots/email/email_3.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`,
+        showOpenTicketBtn: true
     },
     "Formstack": {
         name: `Formstack`,
@@ -229,7 +247,8 @@ const applications = {
         keywords: ['forms', 'pdf', 'data'],
         screenshots: ['./image/applications/screenshots/formstack/formstack_1.png', './image/applications/screenshots/formstack/formstack_2.png', './image/applications/screenshots/formstack/formstack_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#formstack-%28form-builder%29`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#formstack-%28form-builder%29`,
+        showOpenTicketBtn: true
     },
     "Employ Florida": {
         name: `Employ Florida`,
@@ -241,7 +260,8 @@ const applications = {
         keywords: ['state', 'deo'],
         screenshots: ['./image/applications/screenshots/employ_florida/employ_florida_1.png', './image/applications/screenshots/employ_florida/employ_florida_2.png', './image/applications/screenshots/employ_florida/employ_florida_3.png'], // UI, photos
         assets: [], // guides, videos, etc
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx`,
+        showOpenTicketBtn: true
     },
     "Manage Engine": {
         name: `Manage Engine`,
@@ -253,7 +273,8 @@ const applications = {
         keywords: ['ticket', 'workorder', 'submit'],
         screenshots: ['./image/applications/screenshots/manage_engine/manage_engine_1.png', './image/applications/screenshots/manage_engine/manage_engine_2.png', './image/applications/screenshots/manage_engine/manage_engine_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#manageengine-%28helpdesk%29`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#manageengine-%28helpdesk%29`,
+        showOpenTicketBtn: true
     },
     "Adobe Acrobat": {
         name: `Adobe Acrobat`,
@@ -265,7 +286,8 @@ const applications = {
         keywords: ['pdf', '.pdf', 'document', 'print', 'edit pdf', 'create pdf'],
         screenshots: ['./image/applications/screenshots/adobe_acrobat/adobe_acrobat_1.png', './image/applications/screenshots/adobe_acrobat/adobe_acrobat_2.png', './image/applications/screenshots/adobe_acrobat/adobe_acrobat_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#adobe-acrobat-(portable-documents)`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#adobe-acrobat-(portable-documents)`,
+        showOpenTicketBtn: true
     },
     "Power BI": {
         name: `Power BI`,
@@ -277,6 +299,7 @@ const applications = {
         keywords: ['data', 'scorecard', 'dashboard', 'visualization', 'metrics', 'analyze'],
         screenshots: ['./image/applications/screenshots/power_bi/power_bi_1.png', './image/applications/screenshots/power_bi/power_bi_2.png', './image/applications/screenshots/power_bi/power_bi_3.png'],
         assets: [],
-        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#power-bi-(data-visualization)`
+        url: `https://careersourcecf.sharepoint.com/sites/TheSource/SitePages/Information-Technology-Training-Page.aspx#power-bi-(data-visualization)`,
+        showOpenTicketBtn: true
     }
 }

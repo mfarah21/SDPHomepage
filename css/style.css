@@ -278,11 +278,6 @@ header img {
     border-bottom: 0px;
     min-height: 125px;
 }
-/* delete this after finished  */
-.widget-apps .appList li:last-of-type {
-    margin-right: auto;
-}
-/* delete this after finished  */
 .widget-apps li a {
     display: flex;
     flex-direction: column;
